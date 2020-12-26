@@ -14,6 +14,11 @@ let btn_sort;
 let btn_shuffle;
 let sel;
 
+const MIN_WIDTH = 600;
+const MIN_HEIGHT = 500;
+let w;
+let h;
+
 const colors = {
   "blue": [0, 137, 230],
   "darkblue": [32, 89, 232],
@@ -23,9 +28,11 @@ const colors = {
 };
 
 async function setup() {
-  let h = windowHeight/2;
-  if (h < 500 ) h = 500;
-  createCanvas(windowWidth, h);
+  h = windowHeight/2;
+  if (h < MIN_HEIGHT ) h = MIN_HEIGHT;
+  w = windowWidth;
+  if (w < MIN_WIDTH) w = MIN_WIDTH;
+  createCanvas(w, h);
   btn_sort = createButton('sort');
   btn_sort.position(50, 50);
   btn_sort.mousePressed(sortArray);
@@ -69,7 +76,7 @@ function draw() {
 
 
 function drawArray() {
-  let width = windowWidth/n;
+  let width = w/n;
   fill(colors.blue);
   stroke(colors.white);
   
@@ -139,7 +146,9 @@ function sleep(ms) {
 }
 
 function windowResized() { 
-  let h = windowHeight/2;
-  if (h < 500 ) h = 500;
-  resizeCanvas(windowWidth, h); 
+  h = windowHeight/2;
+  if (h < MIN_HEIGHT ) h = MIN_HEIGHT;
+  w = windowWidth;
+  if (w < MIN_WIDTH) w = MIN_WIDTH;
+  resizeCanvas(w, h); 
 } 
