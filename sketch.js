@@ -1,3 +1,8 @@
+//todo:
+//dynamic buttons
+//more sorts
+//layout
+
 //logic variables
 let arr = [];
 const n = 50;
@@ -18,7 +23,9 @@ const colors = {
 };
 
 async function setup() {
-  createCanvas(windowWidth, windowHeight/2);
+  let h = windowHeight/2;
+  if (h < 500 ) h = 500;
+  createCanvas(windowWidth, h);
   btn_sort = createButton('sort');
   btn_sort.position(50, 50);
   btn_sort.mousePressed(sortArray);
@@ -102,7 +109,7 @@ function sortArray() {
 
 async function bubblesort() {
   let run = true;
-  for(let i = 0; i < arr.length; i++) {
+  for(let i = 0; i < arr.length && run; i++) {
     run = false;
     for(let y = 0; y < arr.length-1; y++) {
       if (!sort_running) return;
@@ -130,3 +137,9 @@ function swap(a, b) {
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+function windowResized() { 
+  let h = windowHeight/2;
+  if (h < 500 ) h = 500;
+  resizeCanvas(windowWidth, h); 
+} 
