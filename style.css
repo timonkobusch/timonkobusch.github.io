@@ -1,0 +1,145 @@
+body, h1, h2, h3, h4, h5, h6{
+  font-family: "Lato", sans-serif;
+}
+h2 {
+  font-weight: 400;
+  margin: 10px 0;
+  font-size: 20px;
+}
+h3 {
+  
+}
+
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
+.grey-box {
+  position: absolute;
+  width: 260px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  background-color: #545454;
+  top: 50%;
+  left: 50%;
+  margin-top: -35px;
+  margin-left: -130px;
+}
+
+.intro a:hover {
+  background-color: #454545;
+}
+.intro span {
+  display: inline-block;
+  color: white;
+  vertical-align: middle;
+  line-height: normal;
+  font-size: 25px;
+  letter-spacing: 4px;
+}
+
+.center {
+  text-align: center;
+}
+
+/*
+  Projects Gallery Container
+*/
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  margin-bottom: 10%;
+}
+
+/*
+projects highlight
+
+*/
+.project-box {
+  width: auto;
+  gap: 10px;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid grey;
+  border-radius: 5px;
+  justify-self: center;
+}
+.project-box img {
+  width: 200px;
+  height: 200px;
+}
+.project-box .button {
+  border: 2px solid grey;
+  height: 50px;
+  line-height: normal;
+  color: grey;
+  padding-top: 12px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  float: left;
+  margin-right: 20px;
+}
+li:hover .button {
+  background-color: #00ffff;
+  border: 2px solid #00ffff;
+  color: white;
+}
+/*w3 leftovers*/
+.w3-wide {
+  letter-spacing: 10px;
+}
+
+.w3-hover-opacity {
+  cursor: pointer;
+}
+
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 50px;
+  padding: 14px 16px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+
+.tabcontent {
+  display: none;
+  border-top: none;
+}
