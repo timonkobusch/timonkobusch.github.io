@@ -8,13 +8,14 @@ function setup() {
   flock = new Flock();
   // Add an initial set of boids into the system
   for (let i = 0; i < 150; i++) {
-    let b = new Boid(width / 2,height / 2);
+    
+    let b = new Boid(width / 2 + Math.random() * 400-200,height / 2 + Math.random()* 200-100);
     flock.addBoid(b);
   }
 }
 
 function draw() {
-  background(0,255, 255);
+  clear();
   flock.run();
 }
 function windowResized() {
@@ -61,7 +62,7 @@ function Boid(x, y) {
   this.acceleration = createVector(0, 0);
   this.velocity = createVector(random(-1, 1), random(-1, 1));
   this.position = createVector(x, y);
-  this.r = 4.0;
+  this.r = 6.0;
   this.maxspeed = 3;    // Maximum speed
   this.maxforce = 0.05; // Maximum steering force
 }
