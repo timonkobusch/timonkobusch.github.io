@@ -2,14 +2,14 @@
 <html lang="">
 
 <head>
-  <title>T. Kobusch's projects</title>
+  <title>Timon Kobusch's projects</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="See all Projects made by Timon Kobusch">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+  <link rel="shortcut icon" href="icons/favicon.ico">
+  <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
 
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -22,8 +22,7 @@
 </head>
 
 <body>
-  
-<!-- First Parallax Image with Logo Text -->
+<!-- Intro Animation -->
 <div class="intro" style="line-height: 0;">
   <div id="sketch"></div>
   <a class="grey-box" href="#main">
@@ -32,63 +31,38 @@
 </div>
 
 <!-- Projects Grid-->
+<h2 id="main"> all projects. </h2>
 
-<h2 id="main"> all available projects. </h2>
-<div id="all-grid" class="tabcontent" style="display: block;">
-  <div class="project-container" id="projects">
-    <div class="project-box">
-      <ul>
-        <li>
-          <img src="images/proj1-preview.png" alt="sort">
-          <div class="button" style="cursor: pointer;" onclick="window.location='https://timonkobusch.github.io/sortingalgorithm/'">view in browser</div>
-        </li>
-        <li>
-          <h3>Sorting Visualizer</h3>
-          <p>Sorting visualizer. Sorting visuluasid text ed auremt alm fld</p>
-        </li>
-      </ul>
-      
-    </div>
-    <div class="project-box">
-      <ul>
-        <li>
-          <img src="connectfourai" alt="connect-four-img">
-          <div class="button" style="cursor: pointer;" onclick="window.location='https://timonkobusch.github.io/connectfourai/'">view in browser</div>
-        </li>
-        <li>
-          <h3>Connect Four AI</h3>
-          <p>Sorting visualizer. Sorting visuluasid text ed auremt alm fld</p>
-        </li>
-      </ul>
-      
-    </div>
-    <!-- next project-->
-  </div>
-</div>
+<div class="project-container">
 
-<div id="web-grid" class="tabcontent">
-  <h3 class="center"> WEB PROJECTS </h3>
-  <div class="wrapper" id="projects">
-    <div class="project-box">
-      <img src="images/proj1-preview.png">
-      <p>Sorting Algorithms visualised.</p>
+  <!-- CONNECT 4-->
+  <div class="project">
+    <div class="project-info">
+      <h4>javascript | html | css</h4>
+      <h3>Connect 4 AI</h3>
+      <a href="#">View code on github</a>
     </div>
-    <div class="project-box">
-      <img src="images/proj1-preview.png">
-      <p>Sorting Algorithms visualised.</p>
+    <div class="project-description">
+      <p>Play the classic 'Connect Four' against a self programmed Artificial Intelligence. It utilizes a variation of the miniMax Algorithm.</p>
+      <button onclick="location.href='https://timonkobusch.github.io/connectfourai/'" type="button">View</button>
     </div>
   </div>
-</div>
 
-<div id="git-grid" class="tabcontent">
-  <h3 class="center"> GIT PROJECTS </h3>
-  <div class="wrapper" id="projects">
-    <div class="project-box">
-      <img src="images/proj1-preview.png">
-      <p>Sorting Algorithms visualised.</p>
+  <!-- SORTING ALGORiTHM-->
+  <div class="project">
+    <div class="project-info">
+      <h4>javascript | html | css</h4>
+      <h3>Sort Visualizer</h3>
+      <a href="#">View code on github</a>
+    </div>
+    <div class="project-description">
+      <p>Sorting Algorithms are used everywhere. But how do they look like? This Visualizer will let you have a look inside.</p>
+      <button onclick="location.href='https://timonkobusch.github.io/connectfourai/'" type="button">View</button>
     </div>
   </div>
+  
 </div>
+
 
 
 <!-- Footer -->

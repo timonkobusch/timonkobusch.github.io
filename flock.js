@@ -1,13 +1,15 @@
 
 
 let flock;
+let value;
 
 function setup() {
   var canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('sketch');
   flock = new Flock();
+  value = 120;
   // Add an initial set of boids into the system
-  for (let i = 0; i < 150; i++) {
+  for (let i = 0; i < value; i++) {
     
     let b = new Boid(width / 2 + Math.random() * 400-200,height / 2 + Math.random()* 200-100);
     flock.addBoid(b);
@@ -46,7 +48,7 @@ Flock.prototype.run = function() {
 
 Flock.prototype.addBoid = function(b) {
   this.boids.push(b);
-  if(this.boids.length > 150) {
+  if(this.boids.length > value) {
     this.boids.shift();
   }
 }

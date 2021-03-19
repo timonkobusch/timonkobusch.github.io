@@ -2,12 +2,14 @@ body, h1, h2, h3, h4, h5, h6{
   font-family: "Lato", sans-serif;
 }
 h2 {
+  margin: 0;
   font-weight: 400;
-  margin: 10px 0;
-  font-size: 20px;
+  font-size: 35px;
   text-align: center;
+  background-color: rgb(193, 228, 252);
+  color: rgb(16, 150, 240);
+  padding-top: 10px;
 }
-
 body, html {
   height: 100%;
   color: #777;
@@ -20,6 +22,9 @@ body, html {
 */
 .intro {
   background-image: url("images/lowpoly.png");
+}
+#value-birds {
+  top: 150px;
 }
 
 .grey-box {
@@ -58,107 +63,76 @@ body, html {
   letter-spacing: 4px;
 }
 
-
-
-
-
-.center {
-}
-
 /*
   Projects Gallery Container
 */
 .project-container {
-  display: grid;
+  background-color: rgb(193, 228, 252);
+  display: flex;
+  flex-direction: column;
   grid-template-columns: repeat(1, 1fr);
-  gap: 10px;
-  margin-bottom: 10%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
 }
-
 /*
 projects highlight
-
 */
-.project-box {
-  width: auto;
-  gap: 10px;
-  padding: 10px;
-  background-color: white;
-  border: 2px solid grey;
-  border-radius: 5px;
-  justify-self: center;
+.project {
+  
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+  margin: 20px;
+	max-width: 100%;
+	overflow: hidden;
+	width: 800px;
 }
-.project-box img {
-  width: 200px;
-  height: 200px;
-}
-.project-box .button {
-  border: 2px solid grey;
-  height: 50px;
-  line-height: normal;
-  color: grey;
-  padding-top: 12px;
-  text-align: center;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  float: left;
-  margin-right: 20px;
-}
-.button:hover {
-  background-color: #00ffff;
-  border: 2px solid #00ffff;
+.project-info {
+  background-color: rgb(52, 118, 218);
   color: white;
+	padding: 30px;
+  width: 350px;
+  max-width: 350px;
 }
-/*w3 leftovers*/
+
+.project-info h3 {
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.project-info h4 {
+  font-size: 15px;
+}
+.project-description {
+	padding: 30px;
+	position: relative;
+}
+.project-description button {
+  display: block;
+  background-color: rgb(52, 118, 218);
+  border: 0;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 25px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  letter-spacing: 1px;
+}
+
+.project-description button:hover {
+  background-color: rgb(29, 104, 216);
+}
+
+/*w3 leftovers only footer*/
 .w3-wide {
   letter-spacing: 10px;
 }
 
 .w3-hover-opacity {
   cursor: pointer;
-}
-
-
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  background-color: white;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  width: 50px;
-  padding: 14px 16px;
-  margin-top: 10px;
-  transition: 0.3s;
-}
-
-/* Change background color of buttons on hover */
-
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-
-.tabcontent {
-  display: none;
-  border-top: none;
 }
