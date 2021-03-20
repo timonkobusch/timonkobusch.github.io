@@ -6,8 +6,7 @@ h2 {
   font-weight: 400;
   font-size: 35px;
   text-align: center;
-  background-color: rgb(193, 228, 252);
-  color: rgb(16, 150, 240);
+  color: rgb(9, 100, 160);
   padding-top: 10px;
 }
 body, html {
@@ -62,12 +61,13 @@ body, html {
   font-size: 25px;
   letter-spacing: 4px;
 }
-
+.project-container, h2 {
+  background-color: rgb(221, 221, 221);
+}
 /*
   Projects Gallery Container
 */
 .project-container {
-  background-color: rgb(193, 228, 252);
   display: flex;
   flex-direction: column;
   grid-template-columns: repeat(1, 1fr);
@@ -84,17 +84,18 @@ projects highlight
 	border-radius: 10px;
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 	display: flex;
+  flex-direction: column;
   margin: 20px;
-	max-width: 100%;
+	max-width: 90%;
 	overflow: hidden;
 	width: 800px;
 }
 .project-info {
+  justify-content: center;
   background-color: rgb(52, 118, 218);
   color: white;
-	padding: 30px;
-  width: 350px;
-  max-width: 350px;
+  padding: 20px;
+  padding-left: 30px;
 }
 
 .project-info h3 {
@@ -103,6 +104,7 @@ projects highlight
 }
 
 .project-info h4 {
+  margin: 0;
   font-size: 15px;
 }
 .project-description {
@@ -118,9 +120,8 @@ projects highlight
   color: #fff;
   font-size: 16px;
   padding: 10px 25px;
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
+  margin-right: 0;
+  margin-left: auto;
   letter-spacing: 1px;
 }
 
@@ -135,4 +136,29 @@ projects highlight
 
 .w3-hover-opacity {
   cursor: pointer;
+}
+
+
+@media (min-width: 667px) {
+  .project {
+    flex-direction: row;
+  }
+  .project-info {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(52, 118, 218);
+    color: white;
+    padding: 30px;
+    width: 350px;
+    max-width: 350px;
+    min-width: 250px;
+  }
+  .project-info h3 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  
+  .project-info h4 {
+    font-size: 15px;
+  }
 }
