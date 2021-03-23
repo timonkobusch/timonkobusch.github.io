@@ -60,23 +60,67 @@
       <button onclick="location.href='https://timonkobusch.github.io/sortingalgorithm/'" type="button">View</button>
     </div>
   </div>
-  
+
+  <!-- FlAPPY BIRD AI-->
+  <div class="project">
+    <div class="project-info">
+      <h4>python</h4>
+      <h3>Flappy Bird AI</h3>
+      <a>Code not public</a>
+    </div>
+    <div class="project-description">
+      <p>This is a self learning AI to play Flappy Bird. It uses the NEAT (NeuroEvolution of Augmenting Topologies) Algorithm. The Birds will get better by their generation, similar to real world evolution.</p>
+      <button id="view_btn" onclick="openVideo('flappybird')" type="button">View</button>
+    </div>
+  </div>
+
+
 </div>
 
 
+  
+<div id="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <iframe class="video" width="200" height="233" src="https://www.youtube.com/embed/QuU4lkBgXXA?start=7" 
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+<footer class="w3-center w3-black w3-padding-64 w3-opacity">
   <a href="#sketch" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
 </footer>
+
+<script>
+  var modal = document.getElementById('modal');
+  var close_span = document.getElementsByClassName("close")[0];
+
+  function openVideo(text) {
+    modal.style.display = "block";
+  }
+
+  close_span.onclick = function () {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // media query for video
+  const mediaQuery = window.matchMedia('(min-width: 768px)')
+  if (mediaQuery.matches) {
+    console.log("matching");
+    document.getElementsByClassName('video')[0].setAttribute('width', 600);
+    document.getElementsByClassName('video')[0].setAttribute('height', 700);
+  }
+
+
+</script>
 
 </body>
 </html>
