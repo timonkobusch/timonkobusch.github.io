@@ -2,9 +2,28 @@
 
 let flock;
 let value;
+const getDeviceType = () => {
+  const ua = navigator.userAgent;
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+    return "tablet";
+  }
+  if (
+    /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+      ua
+    )
+  ) {
+    return "mobile";
+  }
+  return "desktop";
+};
+let device = getDeviceType();
+let old_height;
+let old_width;
 
 function setup() {
   var canvas = createCanvas(windowWidth, windowHeight);
+  old_height = windowHeight;
+  old_width = windowWidth;
   canvas.parent('sketch');
   flock = new Flock();
   value = 120;
@@ -21,7 +40,15 @@ function draw() {
   flock.run();
 }
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  if (device !== "desktop") {
+    if (old_width !== windowWidth) {
+      resizeCanvas(windowWidth, windowHeight);
+      old_width = windowWidth;
+      old_height = windowHeight;
+    }
+  } 
+  else
+    resizeCanvas(windowWidth, windowHeight);
 }
 // Add a new boid into the System
 function mouseDragged() {
