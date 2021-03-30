@@ -40,14 +40,7 @@ function draw() {
   flock.run();
 }
 function windowResized() {
-  if (device !== "desktop") {
-    if (old_width !== windowWidth) {
-      resizeCanvas(windowWidth, windowHeight);
-      old_width = windowWidth;
-      old_height = windowHeight;
-    }
-  } 
-  else
+  if (windowWidth > 667)
     resizeCanvas(windowWidth, windowHeight);
 }
 // Add a new boid into the System
